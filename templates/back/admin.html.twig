@@ -4,5 +4,15 @@
 
 {% block body %}
     <h1>Admin</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 alert-info">
+                <a href="{{ path('category_index') }}">Catégories</a>
+            </div>
+            <div class="col-6 alert-success">
+                <a href="{{ path('post_index') }}">Posts</a>
+            </div>
+        </div>
+    </div>
     <a href="/logout">Déconnexion</a>
 {% endblock %}
