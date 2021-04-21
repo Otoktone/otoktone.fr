@@ -1,0 +1,16 @@
+html, body {
+    /*background: linear-gradient(135deg, rgba(29, 96, 164, 1) 0%, rgba(34, 100, 99, 1) 35%, rgba(84, 133, 111, 1) 82%);*/
+    margin: 0;
+    height: 100%;
+}
+
+form {
+    margin: auto;
+    padding-top: 200px;
+    width: 350px;
+    color: white;
+}
+
+form input {
+    margin-bottom: 25px;
+}

@@ -2,6 +2,11 @@
 
 {% block title %}Accueil{% endblock %}
 
+{% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+    {{ encore_entry_link_tags('front-styles') }}
+{% endblock %}
+
 {% block body %}
     <h1>Accueil</h1>
     <a href="/login">Connexion</a>
