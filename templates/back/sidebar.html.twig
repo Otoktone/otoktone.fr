@@ -1,0 +1,54 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <aside class="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
+
+    <i class="fa fa-bars close-aside d-md-none d-lg-none" data-close="show-side-navigation1"></i>
+    <div class="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
+        <img
+            class="rounded-pill img-fluid"
+            width="65"
+            src="{{ asset('build/images/icons/favicon-white.png') }}"
+            alt="">
+        <div class="ms-2">
+        <h5 class="fs-6 mb-0">
+            <a class="text-decoration-none" href="#">Otoktone</a>
+        </h5>
+        <p class="mt-1 mb-0">Menu</p>
+        </div>
+    </div>
+    <ul class="categories list-unstyled">
+        <li class="has-dropdown">
+        <i class="fas fa-home text-white float-left"></i></i><a href="{{ path('admin') }}">Accueil</a>
+        </li>
+        <li class="has-dropdown">
+        <i class="fas fa-file fa-fw text-white float-left"></i><a href="{{ path('post_index') }}">Articles</a>
+        <i class="fas fa-chevron-down text-white float-right"></i>
+            <ul class="sidebar-dropdown list-unstyled">
+            <li><a href="{{ path('post_index') }}">Voir les articles</a></li>
+            <li><a href="{{ path('post_new') }}">Créer un article</a></li>
+            </ul>
+        </li>
+        <li class="has-dropdown">
+        <i class="fas fa-tags fa-fw text-white float-left"></i><a href="{{ path('category_index') }}">Catégories</a>
+        <i class="fas fa-chevron-down text-white float-right"></i>
+            <ul class="sidebar-dropdown list-unstyled">
+            <li><a href="{{ path('category_index') }}">Voir les catégories</a></li>
+            <li><a href="{{ path('category_new') }}">Créer une catégorie</a></li>
+            </ul>
+        </li>
+        <li class="has-dropdown">
+        <i class="fas fa-user fa-fw text-white float-left"></i><a href="/user"> Utilisateurs</a>
+        <i class="fas fa-chevron-down text-white float-right"></i>
+            <ul class="sidebar-dropdown list-unstyled">
+            <li><a href="">Voir les utilisateurs</a></li>
+            <li><a href="">Créer un utilisateur</a></li>
+            </ul>
+        </li>
+        <li class="has-dropdown">
+        <i class="fab fa-google fa-fw text-white float-left"></i><a href="">Analytics</a>
+        </li>
+    </ul>
+    </aside>
+{% endblock %}
+

@@ -2,17 +2,124 @@
 
 {% block title %}Admin{% endblock %}
 
+{% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+    {{ encore_entry_link_tags('back-styles') }}
+{% endblock %}
+
 {% block body %}
-    <h1>Admin</h1>
-    <div class="container">
-        <div class="row">
-            <div class="col-6 alert-info">
-                <a href="{{ path('category_index') }}">Catégories</a>
+
+    {% include "back/sidebar.html.twig" %}
+
+    <section id="wrapper">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid mx-2">
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-navbar" aria-controls="toggle-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i id="navbar-toggler" class="fas fa-bars text-white"></i>
+                </button>
             </div>
-            <div class="col-6 alert-success">
-                <a href="{{ path('post_index') }}">Posts</a>
+            <div class="collapse navbar-collapse" id="toggle-navbar">
+                <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                    <i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i>
+                    </a>
+                </li>
+                </ul>
             </div>
+            </div>
+        </nav>
+
+        <div class="p-4">
+            <div class="welcome">
+            <div class="content rounded-3 p-3">
+                <h1 class="fs-3">Otoktone | Tableau de bord</h1>
+                <p class="mb-0">Administration</p>
+            </div>
+            </div>
+
+            <section class="statistics mt-4">
+                <div class="row">
+                    <div class="col-lg-4">
+                    <div class="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3">
+                        <div class="ms-3">
+                        <div class="d-flex align-items-center">
+                            <h3 class="mb-0">{{ posts | length }} </h3> <span class="d-block ms-2"> Articles</span>
+                        </div>
+                        <a class="fs-normal mb-0" href="{{ path('post_new') }}">Créer</a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4">
+                    <div class="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3">
+                        <div class="ms-3">
+                        <div class="d-flex align-items-center">
+                            <h3 class="mb-0">{{ categories | length }} </h3> <span class="d-block ms-2"> Catégories</span>
+                        </div>
+                        <a class="fs-normal mb-0" href="{{ path('category_new') }}">Créer</a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4">
+                    <div class="box d-flex rounded-2 align-items-center p-3">
+                        <div class="ms-3">
+                        <div class="d-flex align-items-center">
+                            <h3 class="mb-0">{{ users | length }} </h3> <span class="d-block ms-2"> Utilisateurs</span>
+                        </div>
+                        <a class="fs-normal mb-0" href="#">Créer</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="statis mt-4 text-center">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="box bg-primary p-3">
+                        <i class="fa fa-user"></i>
+                        <h3>5,154</h3>
+                        <p class="lead">Sessions</p>
+                    </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="box bg-danger p-3">
+                        <i class="fa fa-eye"></i>
+                        <h3>245</h3>
+                        <p class="lead">Pages vues</p>
+                    </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                    <div class="box bg-warning p-3">
+                        <i class="fa fa-chart-line"></i>
+                        <h3>5,154</h3>
+                        <p class="lead">Taux de rebond</p>
+                    </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                    <div class="box bg-success p-3">
+                        <i class="fa fa-clock"></i>
+                        <h3>5,154</h3>
+                        <p class="lead">Durée sessions</p>
+                    </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="charts mt-4">
+                <div class="chart-container p-3">
+                    <h3 class="fs-6 mb-3">API METEO / MAREES</h3>
+                    <div style="height: 300px">
+                    </div>
+                </div>
+            </section>
         </div>
-    </div>
-    <a href="/logout">Déconnexion</a>
+    </section>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+    {{ encore_entry_link_tags('back-styles') }}
 {% endblock %}
