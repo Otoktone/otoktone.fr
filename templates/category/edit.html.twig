@@ -1,13 +1,62 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Category{% endblock %}
+{% block title %}Édition article {{ category.name}}{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+    {{ encore_entry_link_tags('back-styles') }}
+{% endblock %}
 
 {% block body %}
-    <h1>Edit Category</h1>
 
-    {{ include('category/_form.html.twig', {'button_label': 'Update'}) }}
+{% include "back/sidebar.html.twig" %}
+    
+    <section id="wrapper">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid mx-2">
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-navbar" aria-controls="toggle-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i id="navbar-toggler" class="fas fa-bars text-white"></i>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="toggle-navbar">
+                <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a id="test" class="nav-link" href="#">
+                    <i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i>
+                    </a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
 
-    <a href="{{ path('category_index') }}">back to list</a>
+        <div class="p-4">
+            <div class="welcome">
+                <div class="content rounded-3 p-3">
+                    <h1 class="fs-3">Otoktone | {{ category.name }}</h1>
+                    <p class="mb-0">Édition</p>
+                </div>
+            </div>
 
-    {{ include('category/_delete_form.html.twig') }}
+            <div class="float-right m-4">
+                <button type="button" class="btn btn-info"><a class="" href="{{ path('category_index') }}">Retour</a></button>
+            </div>
+
+            <div id="category_edit">
+                {{ include('category/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+                {{ include('category/_delete_form.html.twig') }}
+            </div>
+
+            
+            
+        </div>
+
+    </section>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+    {{ encore_entry_link_tags('back-styles') }}
 {% endblock %}

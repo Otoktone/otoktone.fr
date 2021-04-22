@@ -1,42 +1,98 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Post{% endblock %}
+{% block title %}Article : {{ post.title}}{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+    {{ encore_entry_link_tags('back-styles') }}
+{% endblock %}
 
 {% block body %}
-    <h1>Post</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ post.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ post.title }}</td>
-            </tr>
-            <tr>
-                <th>Slug</th>
-                <td>{{ post.slug }}</td>
-            </tr>
-            <tr>
-                <th>Content</th>
-                <td>{{ post.content }}</td>
-            </tr>
-            <tr>
-                <th>Created_at</th>
-                <td>{{ post.createdAt ? post.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Updated_at</th>
-                <td>{{ post.updatedAt ? post.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-        </tbody>
-    </table>
+{% include "back/sidebar.html.twig" %}
+    
+    <section id="wrapper">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid mx-2">
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-navbar" aria-controls="toggle-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i id="navbar-toggler" class="fas fa-bars text-white"></i>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="toggle-navbar">
+                <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a id="test" class="nav-link" href="#">
+                    <i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i>
+                    </a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
 
-    <a href="{{ path('post_index') }}">back to list</a>
+        <div class="p-4">
+            <div class="welcome">
+                <div class="content rounded-3 p-3">
+                    <h1 class="fs-3">Otoktone | {{ post.title }}</h1>
+                    <p class="mb-0">Article</p>
+                </div>
+            </div>
 
-    <a href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
+            <div class="float-left m-4">
+                <button type="button" class="btn btn-info"><a class="" href="{{ path('post_edit', {'id': post.id}) }}">Éditer</a></button>
+            </div>
 
-    {{ include('post/_delete_form.html.twig') }}
+            <div class="float-left m-4">
+                <button type="button" class="btn btn-info"><a class="" href="{{ path('post_new') }}">Nouveau</a></button>
+            </div>
+
+            <div class="float-right m-4">
+                <button type="button" class="btn btn-info"><a class="" href="{{ path('post_index') }}">Retour</a></button>
+            </div>
+            
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ post.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Titre</th>
+                        <td>{{ post.title }}</td>
+                    </tr>
+                    <tr>
+                        <th>Slug</th>
+                        <td>{{ post.slug }}</td>
+                    </tr>
+                    <tr>
+                        <th>Contenu</th>
+                        <td>{{ post.content }}</td>
+                    </tr>
+                    <tr>
+                        <th>Créer le</th>
+                        <td>{{ post.createdAt ? post.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th>Modifié le</th>
+                        <td>{{ post.updatedAt ? post.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            {{ include('post/_delete_form.html.twig') }}
+            
+        </div>
+
+    </section>
+
 {% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+    {{ encore_entry_link_tags('back-styles') }}
+{% endblock %}
+
+
+    
+

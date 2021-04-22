@@ -1,30 +1,82 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Category{% endblock %}
+{% block title %}Catégorie : {{ category.name}}{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+    {{ encore_entry_link_tags('back-styles') }}
+{% endblock %}
 
 {% block body %}
-    <h1>Category</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ category.id }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ category.name }}</td>
-            </tr>
-            <tr>
-                <th>Slug</th>
-                <td>{{ category.slug }}</td>
-            </tr>
-        </tbody>
-    </table>
+{% include "back/sidebar.html.twig" %}
+    
+    <section id="wrapper">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid mx-2">
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-navbar" aria-controls="toggle-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i id="navbar-toggler" class="fas fa-bars text-white"></i>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="toggle-navbar">
+                <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a id="test" class="nav-link" href="#">
+                    <i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i>
+                    </a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
 
-    <a href="{{ path('category_index') }}">back to list</a>
+        <div class="p-4">
+            <div class="welcome">
+                <div class="content rounded-3 p-3">
+                    <h1 class="fs-3">Otoktone | {{ category.name }}</h1>
+                    <p class="mb-0">Catégorie</p>
+                </div>
+            </div>
 
-    <a href="{{ path('category_edit', {'id': category.id}) }}">edit</a>
+            <div class="float-left m-4">
+                <button type="button" class="btn btn-info"><a class="" href="{{ path('category_edit', {'id': category.id}) }}">Éditer</a></button>
+            </div>
 
-    {{ include('category/_delete_form.html.twig') }}
+            <div class="float-left m-4">
+                <button type="button" class="btn btn-info"><a class="" href="{{ path('category_new') }}">Nouveau</a></button>
+            </div>
+
+            <div class="float-right m-4">
+                <button type="button" class="btn btn-info"><a class="" href="{{ path('category_index') }}">Retour</a></button>
+            </div>
+            
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Id</th>
+                        <td>{{ category.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Nom</th>
+                        <td>{{ category.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Slug</th>
+                        <td>{{ category.slug }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            {{ include('category/_delete_form.html.twig') }}
+            
+        </div>
+
+    </section>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+    {{ encore_entry_link_tags('back-styles') }}
 {% endblock %}
