@@ -1,0 +1,13 @@
+.table {
+    margin: auto;
+    background-color: var(--dk-gray-600);
+}
+
+.table th {
+    text-transform: uppercase;
+    color: var(--dk-gray-200);
+}
+
+.table td {
+    color: var(--dk-gray-400);
+}

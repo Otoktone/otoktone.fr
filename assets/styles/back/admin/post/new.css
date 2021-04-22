@@ -1,0 +1,16 @@
+form {
+    padding-top: 20px;
+    width: auto;
+}
+
+#post_title {
+    width: 50%;
+}
+
+#post_slug {
+    width: auto;
+}
+
+#post_category {
+    width: 50%;
+}

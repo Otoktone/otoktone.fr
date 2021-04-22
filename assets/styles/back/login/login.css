@@ -5,12 +5,16 @@ html, body {
 }
 
 form {
-    margin: auto;
-    padding-top: 200px;
-    width: 350px;
     color: white;
 }
 
 form input {
     margin-bottom: 25px;
+}
+
+#login_form {
+    margin: auto;
+    padding-top: 200px;
+    width: 350px;
+    color: white;
 }
