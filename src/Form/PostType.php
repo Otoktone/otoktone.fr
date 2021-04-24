@@ -6,6 +6,8 @@ use App\Entity\Post;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Validator\Constraints\File;
 
 class PostType extends AbstractType
 {
@@ -15,9 +17,22 @@ class PostType extends AbstractType
             ->add('title')
             ->add('slug')
             ->add('content')
-            ->add('created_at')
-            ->add('updated_at')
             ->add('category')
+            ->add('image', FileType::class, [
+                'label' => 'Choisir un fichier (PNG/JPEG)',
+                'mapped' => false,
+                'required' => false,
+                'constraints' => [
+                    new File([
+                        'mimeTypes' => [
+                            'image/png',
+                            'image/jpeg',
+                            'image/jpg',
+                        ],
+                        'mimeTypesMessage' => 'Merci de choisir une image valide',
+                    ])
+                ],
+            ])
         ;
     }
 

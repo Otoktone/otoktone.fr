@@ -14,3 +14,7 @@ form {
 #post_category {
     width: 50%;
 }
+
+.custom-file-label {
+    width: 35%;
+}

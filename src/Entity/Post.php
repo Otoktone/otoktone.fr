@@ -4,9 +4,14 @@ namespace App\Entity;
 
 use App\Repository\PostRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\File;
+use DateTime;
+
 
 /**
  * @ORM\Entity(repositoryClass=PostRepository::class)
+ * @ORM\HasLifecycleCallbacks
  */
 class Post
 {
@@ -33,12 +38,16 @@ class Post
     private $content;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @var DateTime
+     * 
+     * @ORM\Column(name="created_at", type="datetime", nullable=false)
      */
-    private $created_at;
+    protected $created_at;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @var DateTime
+     * 
+     * @ORM\Column(name="updated_at", type="datetime", nullable=false)
      */
     private $updated_at;
 
@@ -46,6 +55,52 @@ class Post
      * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="posts")
      */
     private $category;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\File(mimeTypes={ "image/png", "image/jpeg" })
+     */
+    private $image;
+
+    /*
+    *
+    */
+    /*private $imageFile;
+
+    public function setImageFile()
+    {
+        $this->imageFile = $image;
+    }
+ 
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }*/
+
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function updatedTimestamps(): void
+    {
+        $dateTimeNow = new DateTime('now');
+
+        $this->setUpdatedAt($dateTimeNow);
+
+        if ($this->getCreatedAt() === null) {
+            $this->setCreatedAt($dateTimeNow);
+        }
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+ 
+    public function getImage()
+    {
+        return $this->image;
+    }
 
     public function getId(): ?int
     {
@@ -88,28 +143,24 @@ class Post
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeInterface
+    public function getCreatedAt()
     {
         return $this->created_at;
     }
 
-    public function setCreatedAt(\DateTimeInterface $created_at): self
+    public function setCreatedAt(DateTime $created_at)
     {
         $this->created_at = $created_at;
-
-        return $this;
     }
 
-    public function getUpdatedAt(): ?\DateTimeInterface
+    public function getUpdatedAt()
     {
         return $this->updated_at;
     }
 
-    public function setUpdatedAt(\DateTimeInterface $updated_at): self
+    public function setUpdatedAt(DateTime $updated_at)
     {
         $this->updated_at = $updated_at;
-
-        return $this;
     }
 
     public function getCategory(): ?Category
