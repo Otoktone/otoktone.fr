@@ -48,6 +48,7 @@
                     <tr>
                         <th>Article</th>
                         <th>Contenu</th>
+                        <th>Catégorie</th>
                         <th>Création</th>
                         <th>Image</th>
                         <th>Actions</th>
@@ -58,6 +59,7 @@
                         <tr>
                             <td>{{ post.title }}</td>
                             <td>{{ post.content }}</td>
+                            <td>{{ post.category }}</td>
                             <td>{{ post.createdAt ? post.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                             <td>{{ post.image }}</td>
                             <td>

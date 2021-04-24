@@ -82,8 +82,38 @@
     "doctrine/sql-formatter": {
         "version": "1.1.1"
     },
+    "firebase/php-jwt": {
+        "version": "v3.0.0"
+    },
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.3"
+    },
+    "google/apiclient": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "49c5d7a66d863d28513979bf0666dc77599100c0"
+        },
+        "files": [
+            "./config/packages/google_apiclient.yaml"
+        ]
+    },
+    "google/apiclient-services": {
+        "version": "v0.170.0"
+    },
+    "google/auth": {
+        "version": "v0.8"
+    },
+    "guzzlehttp/guzzle": {
+        "version": "6.2.0"
+    },
+    "guzzlehttp/promises": {
+        "version": "1.4.1"
+    },
+    "guzzlehttp/psr7": {
+        "version": "1.2.3"
     },
     "laminas/laminas-code": {
         "version": "4.2.0"
@@ -94,14 +124,23 @@
     "laminas/laminas-zendframework-bridge": {
         "version": "1.2.0"
     },
+    "monolog/monolog": {
+        "version": "1.26.0"
+    },
     "nikic/php-parser": {
         "version": "v4.10.4"
+    },
+    "phpseclib/phpseclib": {
+        "version": "2.0.31"
     },
     "psr/cache": {
         "version": "1.0.1"
     },
     "psr/container": {
         "version": "1.1.1"
+    },
+    "psr/http-message": {
+        "version": "1.0.1"
     },
     "psr/log": {
         "version": "1.1.3"

@@ -19,7 +19,7 @@ class PostType extends AbstractType
             ->add('content')
             ->add('category')
             ->add('image', FileType::class, [
-                'label' => 'Image (PNG/JPEG)',
+                'label' => 'Choisir un fichier (PNG/JPEG)',
                 'mapped' => false,
                 'required' => false,
                 'constraints' => [
