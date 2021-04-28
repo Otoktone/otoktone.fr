@@ -21,7 +21,6 @@
         "symfony/security-bundle": "4.4.*",
         "symfony/twig-bundle": "4.4.*",
         "symfony/validator": "4.4.*",
-        "symfony/var-dumper": "4.4.*",
         "symfony/webpack-encore-bundle": "^1.11",
         "symfony/yaml": "4.4.*",
         "twig/extra-bundle": "^2.12|^3.0",
@@ -75,6 +74,7 @@
     "require-dev": {
         "symfony/maker-bundle": "^1.30",
         "symfony/stopwatch": "^4.4",
+        "symfony/var-dumper": "4.4.*",
         "symfony/web-profiler-bundle": "^4.4"
     }
 }

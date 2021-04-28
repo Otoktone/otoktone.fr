@@ -1,5 +1,10 @@
 {% extends "base.html.twig" %}
 
+{% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+    {{ encore_entry_link_tags('back-styles') }}
+{% endblock %}
+
 {% block body %}
     <aside class="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
 
@@ -48,7 +53,27 @@
         <li class="has-dropdown">
         <i class="fab fa-google fa-fw text-white float-left"></i><a href="">Analytics</a>
         </li>
+        <li class="has-dropdown">
+            <i class="fas fa-sign-out-alt fa-fw text-white float-left"></i><a href="/logout">Déconnexion</a>
+        </li>
     </ul>
+    {#<div id="weather" class="">
+        <div class="text-white text-center">
+            <span class="" id="city">
+            </span><br>
+            <span class="" id="temperature">
+            </span><br>
+            <span class="" id="conditions">
+            </span><br>
+            <span class="" id="description">
+            </span>
+        </div>
+    </div>#}
     </aside>
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+    {{ encore_entry_link_tags('back-styles') }}
 {% endblock %}
 

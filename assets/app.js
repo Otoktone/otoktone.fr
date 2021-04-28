@@ -14,6 +14,7 @@ import './bootstrap';
 
 // Custom Back JS
 import './js/admin/dashboard/dashboard';
+import './js/admin/weather/weather';
 
 // Fontawesome
 require('@fortawesome/fontawesome-free/css/all.min.css');

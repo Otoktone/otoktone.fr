@@ -1,15 +1,80 @@
 {% extends "base.html.twig" %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}Otoktone.fr{% endblock %}
 
 {% block stylesheets %}
     {{ encore_entry_link_tags('app') }}
     {{ encore_entry_link_tags('front-styles') }}
+    {#<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
+        crossorigin="anonymous"/>#}
 {% endblock %}
 
 {% block body %}
-    <h1>Accueil</h1>
-    <a href="/login">Connexion</a>
+
+    <!-- PORTAL
+    ==============================-->
+    <section id="portal">
+        <div id="left-portal"></div>
+        <div id="right-portal"></div>
+        <button type="button" class="btn btn-primary" id="btn-portal">
+        <img class="triskel" src="{{ asset('build/images/front-office/icons/triskel.png') }}" alt=""> 
+        otoktone
+        <img class="triskel" src="{{ asset('build/images/front-office/icons/triskel.png') }}" alt=""> 
+        </button>
+    </section>
+
+    <!-- MATRIX
+    ==============================-->
+    <canvas></canvas>
+
+    <!-- TOGGLE MENU
+    ==============================-->
+    <header class="header" id="top">
+
+        <button class="menu" onclick="this.classList.toggle('opened');
+            this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+            <svg width="50" height="50" viewBox="0 0 100 100">
+                <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,
+                29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,
+                81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,
+                70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,
+                18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+        </button>
+
+    <!-- SIDE MENU
+    ==============================-->
+
+        <div class="sidenav">
+            <img src="{{ asset('build/images/front-office/otoktone-sea.jpg') }}" alt="otoktone mer vagues plage">
+            <div class="side-menu">
+                <a href="#">Accueil</a>
+                <a href="#">Otoktone</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- PRESENTATION
+    ==============================-->
+ 
+        <div id="presentation" class="col-lg12">
+            <div class="main-title">
+                <span>Développeur Web</span>
+                <h1>Alexandre Desmot</h1>
+                <a href="https://www.linkedin.com/in/alexandre-desmot-145a34182/" class="border-btn hero-btn">LinkedIn</a>
+                <!--<a href="https://www.facebook.com/alexotoktone/" class="border-btn hero-btn">Facebook</a>-->
+                <a href="https://github.com/Otoktone" 
+                class="border-btn hero-btn">GitHub</a>
+            </div>
+        </div>
+
 {% endblock %}
 
 {% block javascripts %}
