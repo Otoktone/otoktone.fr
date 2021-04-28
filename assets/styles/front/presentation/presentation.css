@@ -1,0 +1,62 @@
+/*
+*
+* ==========================================
+* PRESENTATION
+* ==========================================
+*
+*/
+#presentation {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    margin: auto;
+    visibility: hidden;
+}
+
+.main-title {
+    padding-top: 100px;
+    padding-left: 50px;
+    position: fixed;
+}
+
+.main-title span {
+    font-size: 60px;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    line-height: 1.2;
+    user-select: none;
+    color: white;
+}
+
+.main-title h1 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: transparent;
+    padding-left: 5px;
+    user-select: none;
+}
+
+.main-title a {
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid #fff;
+    color: #fff;
+    background: none;
+    border-radius: 0px;
+    text-transform: uppercase;
+    padding: 14px 43px;
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    transition: color 0.4s linear;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}

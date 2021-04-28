@@ -1,10 +1,8 @@
-{% extends "base.html.twig" %}
-
-{% block title %}Otoktone.fr{% endblock %}
+{% extends "front/head.html.twig" %}
 
 {% block stylesheets %}
     {{ encore_entry_link_tags('app') }}
-    {{ encore_entry_link_tags('front-styles') }}
+    {{ encore_entry_link_tags('front') }}
     {#<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
@@ -19,15 +17,16 @@
         <div id="left-portal"></div>
         <div id="right-portal"></div>
         <button type="button" class="btn btn-primary" id="btn-portal">
-        <img class="triskel" src="{{ asset('build/images/front-office/icons/triskel.png') }}" alt=""> 
+        <img class="triskel" src="{{ asset('build/images/front/icons/triskel.png') }}" alt=""> 
         otoktone
-        <img class="triskel" src="{{ asset('build/images/front-office/icons/triskel.png') }}" alt=""> 
+        <img class="triskel" src="{{ asset('build/images/front/icons/triskel.png') }}" alt=""> 
         </button>
     </section>
 
     <!-- MATRIX
     ==============================-->
     <canvas></canvas>
+    <i id="arrow-right" class="fas fa-angle-right text-white"></i>
 
     <!-- TOGGLE MENU
     ==============================-->
@@ -50,12 +49,13 @@
     ==============================-->
 
         <div class="sidenav">
-            <img src="{{ asset('build/images/front-office/otoktone-sea.jpg') }}" alt="otoktone mer vagues plage">
+            <img src="{{ asset('build/images/front/otoktone-sea.jpg') }}" alt="otoktone mer vagues plage">
             <div class="side-menu">
                 <a href="#">Accueil</a>
                 <a href="#">Otoktone</a>
                 <a href="#">Portfolio</a>
                 <a href="#">Contact</a>
+                <a href="/login">Connexion</a>
             </div>
         </div>
         
@@ -78,6 +78,5 @@
 {% endblock %}
 
 {% block javascripts %}
-    {{ encore_entry_script_tags('app') }}
-    {{ encore_entry_link_tags('front-styles') }}
+    {{ encore_entry_script_tags('front') }}
 {% endblock %}
