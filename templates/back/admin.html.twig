@@ -5,6 +5,7 @@
 {% block stylesheets %}
     {{ encore_entry_link_tags('app') }}
     {{ encore_entry_link_tags('back-styles') }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.css">
 {% endblock %}
 
 {% block body %}
@@ -14,20 +15,20 @@
     <section id="wrapper">
         <nav class="navbar navbar-expand-md">
             <div class="container-fluid mx-2">
-            <div class="navbar-header">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-navbar" aria-controls="toggle-navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <i id="navbar-toggler" class="fas fa-bars text-white"></i>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="toggle-navbar">
-                <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                    <i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i>
-                    </a>
-                </li>
-                </ul>
-            </div>
+                <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-navbar" aria-controls="toggle-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <i id="navbar-toggler" class="fas fa-bars text-white"></i>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="toggle-navbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
@@ -107,15 +108,27 @@
                 </div>
             </section>
 
-            <section class="charts mt-4">
-                <div class="chart-container p-3">
+            <section class="weather mt-4">
+                <div class="weather-container p-3">
                     <h3 class="fs-6 mb-3">API METEO / MAREES</h3>
                     <div style="height: 300px">
+                        <div id="weather" class="">
+                            <div class="text-white text-center">
+                                <span class="" id="city">
+                                </span><br>
+                                <span class="" id="temperature">
+                                </span><br>
+                                <i class="wi"></i>
+                                <span class="" id="conditions">
+                                </span><br>
+                                <span class="" id="description">
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
-
     </section>
 
 {% endblock %}
