@@ -1,0 +1,139 @@
+/*
+*
+* ==========================================
+* PORTAL ACCUEIL
+* ==========================================
+*
+*/
+
+#portal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    z-index: 99;
+    text-align: center;
+}
+
+#left-portal {
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-image: url('../../../images/front/portal/portal0.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+}
+
+#right-portal {
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    overflow: auto;
+    background-image: url('../../../images/front/portal/portal00.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+}
+
+.triskel {
+    background-image: url('../../../images/front/icons/triskel.png');
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-primary {
+    position: relative;
+    top: 43%;
+    text-transform: uppercase;
+    text-align: center;
+    width: 330px;
+    height: 75px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: black;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    letter-spacing: 8px;
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-primary:before {
+    content: '';
+    background: linear-gradient(
+        45deg, #00ffd5, #002bff, #7a00ff, #3e961c7e, #00ffd5, #002bff, #7a00ff, #3e961c7e, #00ffd5);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(25px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.btn-primary:active {
+    color: black;
+}
+
+.btn-primary:active:after {
+    background: transparent;
+}
+
+.btn-primary:hover:before {
+    opacity: 1;
+}
+
+.btn-primary:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* Change button styling on small viewports */
+@media screen and (min-width: 200px) and (max-width: 640px) {
+    .btn-primary {
+        width: 275px;
+        height: 60px;
+    }
+
+    .triskel {
+        width: 15px;
+        height: 15px;
+        margin: 0;
+    }
+
+    .btn-primary:before {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,6 @@
+canvas {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    width: 100%;
+}
