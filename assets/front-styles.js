@@ -23,12 +23,12 @@ import './styles/front/style.css';
 import './styles/front/portal/portal.css';
 import './styles/front/nav/toggle-menu.css';
 import './styles/front/nav/side-menu.css';
-import './styles/front/matrix/matrix.css';
 import './styles/front/presentation/presentation.css';
+import './styles/front/pages/otoktone.css';
 
 /*
 * FRONT JS
 */
 import './js/front/portal/portal.js';
 //import './js/front/nav/side-menu.js'; <-- remplacé par CSS
-import './js/front/matrix/matrix.js';
+import './js/front/slider/slide.js';

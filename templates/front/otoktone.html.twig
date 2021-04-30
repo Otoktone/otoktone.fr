@@ -1,0 +1,36 @@
+{% extends "front/layout/layout.html.twig" %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('front') }}
+    {#<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
+        crossorigin="anonymous"/>#}
+{% endblock %}
+
+{% block body %}
+
+    <!-- TOGGLE MENU
+    ==============================-->
+    {% include "front/layout/header.html.twig" %}
+
+    <!-- OTOKTONE
+    ==============================-->
+
+    <div id="otoktone" class="w-100">
+        <h1 class="m-5 text-uppercase text-white">Otoktone || Concept</h1>
+        <div id="post-tableau" class="w-85 m-5 text-white">
+            {% for post in posts %}
+                <div>
+                    <div class="text-uppercase">{{ post.title }}</div>
+                    <img src="{{ post.image }}" alt="">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('front') }}
+{% endblock %}

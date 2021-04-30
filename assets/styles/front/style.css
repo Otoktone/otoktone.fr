@@ -28,7 +28,6 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    visibility: hidden;
     background: transparent;
 }
 
@@ -38,9 +37,3 @@ a, a:hover, a:visited, a:active
 	text-decoration:none;
 }
 
-#arrow-right {
-    position: absolute;
-    right: 5%;
-    top: 45%;
-    font-size: 3em;
-}
