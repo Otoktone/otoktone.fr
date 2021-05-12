@@ -12,6 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Psr\Log\LoggerInterface;
 
 /**
  * @Route("/post")
@@ -108,7 +109,6 @@ class PostController extends AbstractController
 
                 // Move the file to the directory
                 try {
-                    $pathToFile = $this->getParameter('images_directory').'/'.$imageFile;
                     $imageFile->move(
                         $this->getParameter('images_directory'),
                         $newFilename
@@ -117,7 +117,7 @@ class PostController extends AbstractController
                     echo 'Impossible d\'enregistrer l\'image';
                 }
 
-                $post->setImage($pathToFile);
+                $post->setImage($newFilename);
             }
             
             $this->getDoctrine()->getManager()->flush();
@@ -134,16 +134,22 @@ class PostController extends AbstractController
     /**
      * @Route("/{id}", name="post_delete", methods={"POST"})
      */
-    public function delete(Request $request, Post $post): Response
+    public function delete(Request $request, Post $post, LoggerInterface $logger): Response
     {
         if ($this->isCsrfTokenValid('delete'.$post->getId(), $request->request->get('_token'))) {
+
+            $imageFileName = $post->getImage();
+            $pathToFile = $this->getParameter('images_directory').'/'.$imageFileName;
+            if (file_exists($pathToFile)) {
+                $logger->error("Le fichier $pathToFile existe.");
+                unlink($pathToFile);
+            } else {
+                $logger->error("Le fichier $pathToFile n'existe pas.");
+            }
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($post);
             $entityManager->flush();
-
-            $imageFile = $post->getImage('image')->getData();
-            $pathToFile = $this->getParameter('images_directory').'/'.$imageFile;
-            $entityManager->remove($imageFile);
         }
 
         return $this->redirectToRoute('post_index');
