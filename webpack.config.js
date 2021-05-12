@@ -30,6 +30,7 @@ Encore
     .addEntry('back', './assets/back-styles.js')
     .addEntry('front', './assets/front-styles.js')
     .addEntry('matrix', './assets/matrix.js')
+    .addEntry('weather', './assets/weather.js')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')

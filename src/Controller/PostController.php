@@ -92,12 +92,6 @@ class PostController extends AbstractController
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
 
-        if ($post->getImage() != '') {
-            $post->setImage(
-                new File($this->getParameter('images_directory') . '/' . $post->getImage())
-            );
-        }
-
         if ($form->isSubmitted() && $form->isValid()) {
 
             /** @var UploadedFile $imageFile */
@@ -114,6 +108,7 @@ class PostController extends AbstractController
 
                 // Move the file to the directory
                 try {
+                    $pathToFile = $this->getParameter('images_directory').'/'.$imageFile;
                     $imageFile->move(
                         $this->getParameter('images_directory'),
                         $newFilename
@@ -122,7 +117,7 @@ class PostController extends AbstractController
                     echo 'Impossible d\'enregistrer l\'image';
                 }
 
-                $post->setImage($newFilename);
+                $post->setImage($pathToFile);
             }
             
             $this->getDoctrine()->getManager()->flush();
@@ -145,6 +140,10 @@ class PostController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($post);
             $entityManager->flush();
+
+            $imageFile = $post->getImage('image')->getData();
+            $pathToFile = $this->getParameter('images_directory').'/'.$imageFile;
+            $entityManager->remove($imageFile);
         }
 
         return $this->redirectToRoute('post_index');
