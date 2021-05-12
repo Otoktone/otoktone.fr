@@ -18,9 +18,22 @@
     ==============================-->
 
     <div id="otoktone" class="w-100">
-        <h1 class="m-5 text-uppercase text-white">Otoktone || Concept</h1>
+        <h1 class="m-5 text-uppercase text-white">Otoktone || Portfolio</h1>
         
-        
+        <div id="skew">
+            <div id="post-tableau" class="w-85 m-5 text-white">
+            {% for post in posts %}
+                <div class="portfolio-otoktone">
+                    <img class="img-portfolio img-fluid" src="{{ asset('uploads/images/' ~ post.image) }}" alt="">
+                    <h2 class="text-uppercase">{{ post.title }}</h2>
+                    <p>{{ post.content }}</p>
+                    <button type="button" class="btn btn-info m-4"><a class="" 
+                        href="#">Site</a>
+                    </button>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
     </div>
 
 {% endblock %}

@@ -1,5 +1,25 @@
+#skew {
+    margin-top: 100px;
+    transform: skewY(-11deg);
+    background-color: gray;
+    height: 100vh;
+    z-index: 0;
+}
+
 #post-tableau {
-    border: 2px white solid;
-    border-radius: 5px;
     padding: 15px;
+    z-index: 1;
+    transform: skewY(11deg);
+}
+
+.portfolio-otoktone {
+    border: 2px white solid;
+    display: flex;
+    margin: 5px;
+}
+
+.img-portfolio {
+    width: 25%;
+    border: white solid 2px;
+    margin: 5px;
 }

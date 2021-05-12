@@ -29,8 +29,12 @@ $('.sidebar .close-aside').addEventListener('click', function () {
 })
 
 
+
+
 // Global defaults
-//window.animation.duration = 2000; // Animation duration
+
+Chart.defaults.global.animation.duration = 2000; // Animation duration
+
 
 
 

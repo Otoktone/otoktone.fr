@@ -32,4 +32,3 @@ import './styles/back/admin/category/edit.css';
 * BACK JS
 */
 import './js/admin/dashboard/dashboard';
-import './js/admin/weather/weather';
