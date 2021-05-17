@@ -70,7 +70,7 @@
                     </tr>
                     <tr>
                         <th>Image</th>
-                        <td>{{ post.image }}</td>
+                        <td><img class="img-post" src="{{ asset('uploads/images/' ~ post.image) }}" alt=""></td>
                     </tr>
                     <tr>
                         <th>Créer le</th>
@@ -82,10 +82,6 @@
             {{ include('post/_delete_form.html.twig') }}
             
         </div>
-
-        <pre>
-            {{ (post.image) }}
-        </pre>
 
     </section>
 
