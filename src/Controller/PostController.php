@@ -88,7 +88,7 @@ class PostController extends AbstractController
     /**
      * @Route("/{id}/edit", name="post_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, Post $post): Response
+    public function edit(Request $request, Post $post, LoggerInterface $logger): Response
     {
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
@@ -97,15 +97,14 @@ class PostController extends AbstractController
 
             /** @var UploadedFile $imageFile */
             $imageFile = $form->get('image')->getData();
-            //$imageFile = $post->getImage();
+            
+            $imageFileName = $post->getImage();
 
             if ($imageFile) {
                 $originalFilename = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
 
                 $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
                 $newFilename = $safeFilename.'-'.uniqid().'.'.$imageFile->guessExtension();
-
-                // TODO : Delete old file
 
                 // Move the file to the directory
                 try {
@@ -117,10 +116,21 @@ class PostController extends AbstractController
                     echo 'Impossible d\'enregistrer l\'image';
                 }
 
+                
+                $pathToFile = $this->getParameter('images_directory').'/'.$imageFileName;
+                if (file_exists($pathToFile)) {
+                    $logger->error("Le fichier $pathToFile existe.");
+                    unlink($pathToFile);
+                } else {
+                    $logger->error("Le fichier $pathToFile n'existe pas.");
+                }
+
                 $post->setImage($newFilename);
             }
-            
-            $this->getDoctrine()->getManager()->flush();
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($post);
+            $entityManager->flush();
 
             return $this->redirectToRoute('post_index');
         }

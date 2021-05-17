@@ -60,7 +60,7 @@
                             <td>{{ post.content }}</td>
                             <td>{{ post.category }}</td>
                             <td>{{ post.createdAt ? post.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-                            <td>{{ post.image }}</td>
+                            <td><img class="img-post" src="{{ asset('uploads/images/' ~ post.image) }}" alt=""></td>
                             <td>
                                 <a href="{{ path('post_show', {'id': post.id}) }}">
                                 <i class="fas fa-eye fa-fw"></i>
@@ -68,7 +68,7 @@
                                 <a href="{{ path('post_edit', {'id': post.id}) }}">
                                 <i class="fas fa-pencil-alt fa-fw"></i>
                                 </a>
-                                <a href="{{ path('post_delete', {'id': post.id}) }})" 
+                                <a href="{{ path('post_delete', {'id' : post.id}) }})" 
                                 onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet article ?')">
                                 <i class="fas fa-trash-alt fa-fw"></i>
                                 </a>

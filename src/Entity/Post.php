@@ -58,7 +58,6 @@ class Post
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\File(mimeTypes={ "image/png", "image/jpeg" })
      */
     private $image;
 
@@ -95,6 +94,8 @@ class Post
     public function setImage($image)
     {
         $this->image = $image;
+
+        return $this;
     }
  
     public function getImage()

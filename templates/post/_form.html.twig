@@ -2,5 +2,8 @@
 
 {{ form_start(form) }}
     {{ form_widget(form) }}
+    {% if form.vars.value.image is not null %}
+        <img class="img-post" src="{{ asset('uploads/images/' ~ form.vars.value.image) }}" />
+    {% endif %}
     <button class="btn btn-info float-left m-4">{{ button_label|default('Enregistrer') }}</button>
 {{ form_end(form) }}
