@@ -1,0 +1,75 @@
+#otoktone {
+    background-image: url("../../../images/background-otoktone.jpg");
+    background-size: contain;
+}
+
+#skew {
+    margin-top: 150px;
+    transform: skewY(-5deg);
+    background-color: rgba(0, 0, 0, .85);
+    z-index: 0;
+    border-top: 4px solid #1d60a4;
+    border-bottom: 4px solid #226463;
+}
+
+#post-tableau {
+    padding: 15px;
+    z-index: 1;
+    transform: skewY(5deg);
+}
+
+.portfolio-otoktone {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 5px;
+    padding: 15px;
+}
+
+.img-portfolio {
+    background-color: white;
+    border-radius: 5px;
+    width: 50%;
+    border: white solid 2px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.portfolio-otoktone h2 {
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.portfolio-otoktone hr {
+    width: 25%;
+    margin: auto;
+    background-color: white;
+    margin-bottom: 25px;
+}
+
+.portfolio-otoktone p {
+    margin: auto;
+    margin-bottom: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.portfolio-otoktone .btn {
+    margin: auto;
+}
+
+#portfolio {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 250px;
+}
+
+#portfolio img {
+    width: 25%;
+    margin: 5px;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+
+

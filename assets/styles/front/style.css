@@ -12,6 +12,7 @@
 }
 
 body {
+    font-family: cyberfunk;
     display: flex;
     background: black;
     /*overflow: hidden;

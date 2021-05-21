@@ -57,7 +57,7 @@
                     {% for post in posts %}
                         <tr>
                             <td>{{ post.title }}</td>
-                            <td>{{ post.content }}</td>
+                            <td class="text-justify">{{ post.content }}</td>
                             <td>{{ post.category }}</td>
                             <td>{{ post.createdAt ? post.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                             <td><img class="img-post" src="{{ asset('uploads/images/' ~ post.image) }}" alt=""></td>
