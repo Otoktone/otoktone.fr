@@ -74,7 +74,8 @@
 #presentation2 > div {
     width: 100%;
     height: 100%;
-    background-color: lightslategrey;
+    background-color: #344242;
+    opacity: .95;
 }
 
 
