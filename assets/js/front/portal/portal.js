@@ -14,6 +14,7 @@ $(function () {
         $('#presentation').css('visibility', 'visible');
         $('canvas').css('visibility', 'visible');
         $('body').css('overflow', 'auto');
+        $('#arrow-right').css('visibility', 'visible');
         //$('body').css('background-color', '#4ca1af');
         //$('body').css('background-image', 'linear-gradient(135deg, #4ca1af 0%, #c4e0e5 100%)');
         window.scrollTo(0,0);

@@ -5,7 +5,10 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background: linear-gradient(135deg, rgba(29,96,164,1) 0%, rgba(34,100,99,1) 35%, rgba(84,133,111,1) 82%);
+  /*background: linear-gradient(135deg, rgba(29,96,164,1) 0%, rgba(34,100,99,1) 35%, rgba(84,133,111,1) 82%);*/
+  background-image: url(../../../images/front/otoktone-circuits.jpg);
+  background-position: center;
+  background-size: cover;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -30,19 +33,33 @@
   padding: 4px 8px 4px 8px;
   text-decoration: none;
   font-size: 20px;
-  color: #010100;
+  color: white;
   display: block;
   transition: 0.3s;
   text-transform: uppercase;
   line-height: 1.5em;
   letter-spacing: 2px;
-  border: 2px solid #010100;
+  border: 2px solid white;
   width: 200px;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
-  border: 2px solid white;
+  color: #f1f1f14d;
+  border: 2px solid #f1f1f14d;
+}
+
+.footer-social {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.footer-social a {
+  border-radius: 50%;
+  width: 50px;
+  padding: 7px;
 }
 
 

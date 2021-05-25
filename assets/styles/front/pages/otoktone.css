@@ -79,8 +79,7 @@ div.text p.infos {
     padding: 25px;
     margin-bottom: 150px;
     color: white;
-
-    max-width: 1280px;
+    width: 85%;
     padding: 1rem;
     color: white;
     border-width: 3px;

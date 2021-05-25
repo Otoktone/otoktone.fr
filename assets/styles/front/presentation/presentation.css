@@ -74,8 +74,32 @@
 #presentation2 > div {
     width: 100%;
     height: 100%;
-    background-color: #344242;
-    opacity: .95;
+    background-image: url('../../../images/front/otoktone-circuits-dark.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#presentation2 p {
+    margin: auto;
+    padding: 10px;
+    color: white;
+    width: 75%;
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+        linear-gradient(
+        to bottom, 
+        #226463, 
+        rgba(0, 0, 0, 0)
+        ) 1 100%;
+}
+
+#presentation2 .round {
+    width: 50px;
+    height: 50px;
+    border: 2px white solid;
+    border-radius: 50%;
+    padding: 10px;
 }
 
 
@@ -86,6 +110,7 @@
     font-size: 3em;
     cursor: pointer;
     z-index: 1;
+    visibility: hidden;
 }
 
 #arrow-left {
