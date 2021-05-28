@@ -33,6 +33,11 @@ class Post
     private $slug;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $url;
+
+    /**
      * @ORM\Column(type="text")
      */
     private $content;
@@ -172,6 +177,26 @@ class Post
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of url
+     */ 
+    public function getUrl()
+    {
+        return $this->url;
+    }
+
+    /**
+     * Set the value of url
+     *
+     * @return  self
+     */ 
+    public function setUrl($url)
+    {
+        $this->url = $url;
 
         return $this;
     }
