@@ -18,7 +18,10 @@
     ==============================-->
 
     <div id="otoktone" class="w-100">
-        <h1 class="m-5 text-uppercase text-white">Otoktone || Portfolio</h1>
+        <div class="header-logo">
+            <img class="logo-otoktone mt-4 ml-4" src="{{ asset('build/images/logo-otoktone.png') }}" alt="logo otoktone.fr alexandre desmot">
+            <h1 class="mt-5 ml-2 text-uppercase text-white">Otoktone | Portfolio</h1>
+        </div>
         
             {% for post in posts %}
             <div id="skew">
@@ -36,7 +39,8 @@
             </div>
             {% endfor %}
 
-            <div id="portfolio" class="container">
+            <h4 class="text-uppercase">-Réalisations-</h4>
+            <div id="portfolio" class="col-lg-12">
             {% for post in posts %}
                     <img class="img-fluid" src="{{ asset('uploads/images/' ~ post.image) }}" alt="">
             {% endfor %}

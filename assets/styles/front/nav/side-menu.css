@@ -1,3 +1,7 @@
+/** --------------------------------
+ -- MENU STYLE
+-------------------------------- */
+
 .sidenav {
   height: 100%;
   width: 0;
@@ -9,7 +13,7 @@
   background-image: url(../../../images/front/otoktone-circuits.jpg);
   background-position: center;
   background-size: cover;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: 0.5s;
   padding-top: 60px;
   text-align: center;
@@ -23,9 +27,7 @@
 
 .sidenav img {
   height: 25%;
-  border-radius: 50%;
   margin-bottom: 25px;
-  border: 2px solid white;
 }
   
 .sidenav a {
@@ -48,6 +50,13 @@
   border: 2px solid #f1f1f14d;
 }
 
+#legal-mentions, #copyright {
+  width: 50%;
+  color: #818386;
+  margin: auto;
+  padding-top: 50px;
+}
+
 .footer-social {
   display: flex;
   margin: auto;
@@ -62,8 +71,42 @@
   padding: 7px;
 }
 
+#linkedin {
+  color: #0072b1;
+}
+
+#facebook {
+  color: #4267B2;
+}
+
+#github {
+  color: #4078c0;
+}
+
+@media (max-width: 480px) {
+  .sidenav {
+    padding-top: 30px;
+  }
+
+  #legal-mentions {
+    display: none;
+  }
+
+  .footer-social {
+    margin-top: 25px;
+  }
+
+  #copyright {
+    padding-top: 25px;
+  }
+}
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
 }

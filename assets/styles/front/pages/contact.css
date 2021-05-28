@@ -1,3 +1,7 @@
+/** --------------------------------
+ -- CONTACT PAGE
+-------------------------------- */
+
 :root {
   --primary-color: #FCFDFD;
   --secondary-color: #818386;
@@ -49,7 +53,7 @@ h2 {
   font-weight: 300;
 }
 
-p {
+#contact p {
   color: var(--secondary-color);
   font-size: 0.9rem;
   letter-spacing: 0.01rem;
@@ -124,6 +128,31 @@ form {
   }
   #contact_nom, #contact_mail, #contact_message, #submit-button {
     font-size: 0.65rem;
+  }
+  #submit-button {
+    width: 7rem;
+  }
+  .theme-switch-wrapper {
+    width: 120px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #contact {
+    overflow: hidden;
+  }
+  .left-col {
+    display: none;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+  #contact_nom, #contact_mail, #contact_message, #submit-button {
+    font-size: 0.65rem;
+    width: 250px;
   }
   #submit-button {
     width: 7rem;

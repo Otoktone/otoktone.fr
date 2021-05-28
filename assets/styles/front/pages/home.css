@@ -1,0 +1,14 @@
+/** --------------------------------
+ -- HOME PAGE
+-------------------------------- */
+
+body {
+    overflow: hidden !important;
+}
+
+@media (max-width: 480px) {
+    body {
+        overflow: auto !important;
+        overflow-x: hidden !important;
+    }
+}

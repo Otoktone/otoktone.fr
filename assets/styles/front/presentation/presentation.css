@@ -1,16 +1,14 @@
-/*
-*
-* ==========================================
-* PRESENTATION
-* ==========================================
-*
-*/
+/** --------------------------------
+ -- PRESENTATION HOME PAGE
+-------------------------------- */
+
 #presentation {
     position: absolute;
     top: 15%;
     left: 5%;
     margin: auto;
     visibility: hidden;
+    overflow: hidden;
 }
 
 .main-title {
@@ -28,6 +26,7 @@
     line-height: 1.2;
     user-select: none;
     color: white;
+    font-family: Cyberfunk;
 }
 
 .main-title h1 {
@@ -67,8 +66,15 @@
     left: -100%;
     margin: auto;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 0;
+}
+
+#presentation2 a {
+    margin-top: 10px;
+    color: #226463;
+    text-transform: uppercase;
+    font-family: Cyberfunk;
 }
 
 #presentation2 > div {
@@ -97,9 +103,10 @@
 #presentation2 .round {
     width: 50px;
     height: 50px;
-    border: 2px white solid;
+    border: 2px #226463 solid;
     border-radius: 50%;
     padding: 10px;
+    color: white;
 }
 
 
@@ -121,4 +128,69 @@
     cursor: pointer;
     visibility: hidden;
     z-index: 1;
+}
+
+#arrow-down {
+    visibility: hidden;
+}
+
+@media (max-width: 480px) {
+
+    #presentation {
+        left: 0;
+    }
+
+    .main-title {
+        position: static;
+        text-align: center;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .main-title span {
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: .2em;
+        line-height: 2em;
+    }
+    
+    .main-title h1 {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 40px;
+    }
+
+    #presentation2 {
+        position: absolute;
+        top: 700px;
+        left: 0;
+    }
+
+    #presentation2 > div {
+        background-image: none;
+    }
+
+    #presentation2 p {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 50px !important;
+    }
+
+    #arrow-right {
+        display: none;
+    }
+
+    #arrow-left {
+        display: none;
+    }
+
+    #arrow-down {
+        visibility: visible;
+        visibility: visible;
+        position: relative;
+        right: 50%;
+        top: 500px;
+        font-size: 2em;
+    }
 }

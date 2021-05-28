@@ -30,6 +30,7 @@ Encore
     .addEntry('back', './assets/back-styles.js')
     .addEntry('front', './assets/front-styles.js')
     .addEntry('matrix', './assets/matrix.js')
+    .addEntry('home', './assets/home.js')
     .addEntry('weather', './assets/weather.js')
     .addEntry('contact', './assets/contact.js')
 

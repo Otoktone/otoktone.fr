@@ -1,3 +1,6 @@
+/** --------------------------------
+ -- OTOKTONE PAGE
+-------------------------------- */
 
 div#container {
     text-align: center;
@@ -8,6 +11,7 @@ div#container {
     transform: skewY(-5deg);
     border-bottom: 4px solid #1d60a4;
     border-top: 4px solid #226463;
+    margin-bottom: 100px;
 }
 
 div.frame {

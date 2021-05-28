@@ -2,10 +2,7 @@
 
 {% block stylesheets %}
     {{ encore_entry_link_tags('front') }}
-    {#<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
-        crossorigin="anonymous"/>#}
+    {{ encore_entry_link_tags('home') }}
 {% endblock %}
 
 {% block body %}
@@ -35,7 +32,7 @@
     <!-- PRESENTATION
     ==============================-->
  
-    <div id="presentation" class="col-lg12">
+    <div id="presentation" class="col-lg12 col-sm-12">
         <div class="main-title">
             <span>Développeur Web</span>
             <h1>Alexandre Desmot</h1>
@@ -46,25 +43,30 @@
         </div>
     </div>
 
+    <i id="arrow-down" class="fas fa-angle-down text-white"></i>
+
     <!-- PRESENTATION 2
     ==============================-->
 
-    <div id="presentation2" class="col-lg12 p-4">
+    <div id="presentation2" class="col-lg12 col-sm-12 p-4">
         <div class="p-4" >
-            <h2 class="text-uppercase text-white">Alexandre Desmot || Développeur Web </h2>
+            <h2 class="text-uppercase text-white">Alexandre Desmot - Développeur Web </h2>
             <h3 class="text-white">Conception site web - Design</h3>
             <hr>
-            <p class="mb-3 text-justify"><i class="round fas fa-laptop-code float-left m-2"></i>OTOKTONE : QU'EST-CE QUE C'EST ? <br>
+            <p class="mb-3 text-justify"><i class="round fas fa-laptop-code float-left m-2"></i>
+                <span class="text-uppercase">OTOKTONE : QU'EST-CE QUE C'EST ?</span><br>
                 Otoktone c'est un pseudo, venu de contrées lointaines :rires: Il signifie beaucoup de choses, au début c'était un surnom rigolo et original, avec le temps c'est devenu un mot important à mes yeux. Ne pas oublier ses racines, notre planète qui a vue se succéder toutes ces générations avant nous et qu'aujourd'hui nous foulons de nos pas. Otoktone c'est une envie d'aller de l'avant sans oublier le passé, en construisant de façon responsable tout en respectant ce qui nous entoure.
                 <br>
                 <a class="float-right" href="/otoktone">Otoktone</a>
             </p>
-            <p class="mb-3 text-justify"><i class="round fas fa-file-code float-left m-2"></i>MON PARCOURS. <br> 
+            <p class="mb-3 text-justify"><i class="round fas fa-file-code float-left m-2"></i>
+                <span class="text-uppercase">MON PARCOURS :</span> <br> 
                 Étudiant en école de design, j'ai tout d'abord découvert la suite Adobe, puis en parallèle de mes études d'architecture d'intérieur, je faisais pour le plaisir des sites/forums avec mes amis. Attiré par les nouvelles technologies et l'informatique depuis mon enfance, c'est tout naturellement que j'ai choisi de me réorienter vers une formation en réalisation d'application web. J'apprécie cet univers où chaque projet amène de nouveaux problèmes qui à leurs tours, amèneront de nouvelles solutions. C'est sans cesse de nouvelles découvertes, un monde infini et riche de tant de possibilités. Développeur full stack - Développeur front-end - Développeur back-end.
                 <br>
                 <a class="float-right" href="/portfolio">Portfolio</a>
             </p>
-            <p class="mb-3 text-justify"><i class="round fas fa-database float-left m-2"></i>MES COMPÉTENCES / TECHNOS. <br>
+            <p class="mb-3 text-justify"><i class="round fas fa-database float-left m-2"></i>
+                <span class="text-uppercase">COMPÉTENCES / TECHNOS :</span> <br>
                 Comme tout à chacun, j'ai commencé avec le HTML, puis le CSS pour commencer à mettre en forme, ajouter des animations, évidemment le JavaScript n'était pas très loin, évolution logique de ce cursus. Enfin les bases de données en SQL et pour finir le PHP et le framework Symfony que j'ai utilisé, notamment, pour la réalisation de ce site.
                 Plus de détails sur mon profil Linkedin.
                 <br>

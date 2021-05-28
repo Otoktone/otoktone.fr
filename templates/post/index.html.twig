@@ -59,7 +59,7 @@
                             <td>{{ post.title }}</td>
                             <td class="text-justify">{{ post.content }}</td>
                             <td>{{ post.category }}</td>
-                            <td>{{ post.createdAt ? post.createdAt|date("d-m-Y H:i") : '' }}</td>
+                            <td id="date">{{ post.createdAt ? post.createdAt|date("d-m-Y H:i") : '' }}</td>
                             <td><img class="img-post" src="{{ asset('uploads/images/' ~ post.image) }}" alt=""></td>
                             <td>
                                 <a href="{{ path('post_show', {'id': post.id}) }}">

@@ -1,3 +1,7 @@
+/** --------------------------------
+ -- INDEX POST STYLE
+-------------------------------- */
+
 .table {
     margin: auto;
     background-color: var(--dk-gray-600);
@@ -10,6 +14,10 @@
 
 .table td {
     color: var(--dk-gray-400);
+}
+
+#date {
+    width: 125px;
 }
 
 .img-post {

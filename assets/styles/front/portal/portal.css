@@ -1,10 +1,6 @@
-/*
-*
-* ==========================================
-* PORTAL ACCUEIL
-* ==========================================
-*
-*/
+/** --------------------------------
+ -- PORTAL HOME PAGE
+-------------------------------- */
 
 #portal {
     position: fixed;
@@ -69,7 +65,7 @@
     border-radius: 10px;
     letter-spacing: 8px;
     font-size: large;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Cyberfunk;
 }
 
 .btn-primary:before {

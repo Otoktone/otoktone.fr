@@ -1,10 +1,6 @@
-/*
-*
-* ==========================================
-* CSS OTOKTONE
-* ==========================================
-*
-*/
+/** --------------------------------
+ -- GLOBAL CSS - OTOKTONE.FR
+-------------------------------- */
 
 * {
     margin: 0; 
@@ -12,7 +8,7 @@
 }
 
 body {
-    font-family: cyberfunk;
+    font-family: Roboto;
     display: flex;
     background: black;
     /*overflow: hidden;
@@ -36,4 +32,17 @@ a, a:hover, a:visited, a:active
 {
 	color:white;
 	text-decoration:none;
+}
+
+h1, h2, h3, h4 {
+    font-family: cyberfunk;
+}
+
+.header-logo {
+    display: flex;
+}
+
+.logo-otoktone {
+    width: 80px;
+    height: 80px;
 }
