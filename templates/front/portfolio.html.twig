@@ -31,9 +31,11 @@
                         <h2 class="text-uppercase">{{ post.title }}</h2>
                         <hr>
                         <p class="text-justify">{{ post.content }}</p>
-                        <button type="button" class="btn btn-info">
-                            <a class="" href="#">Voir le site</a>
-                        </button>
+                        {% if post.url %}
+                            <button type="button" class="btn btn-info">
+                                <a class="" href="{{ post.url }}">Voir le site</a>
+                            </button>
+                        {% endif %}
                     </div>
                 </div>
             </div>

@@ -15,6 +15,10 @@ form {
     width: auto;
 }
 
+#post_url {
+    width: 50%;
+}
+
 #post_category {
     width: 50%;
 }
