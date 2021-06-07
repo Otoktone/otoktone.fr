@@ -1,0 +1,75 @@
+
+
+{% block body %}
+
+{% include "back/sidebar.html.twig" %}
+    
+    <section id="wrapper">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid mx-2">
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-navbar" aria-controls="toggle-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i id="navbar-toggler" class="fas fa-bars text-white"></i>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="toggle-navbar">
+                <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a id="test" class="nav-link" href="#">
+                    <i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i>
+                    </a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+
+        <div class="p-4">
+            <div class="welcome">
+                <div class="content rounded-3 p-3">
+                    <h1 class="fs-3">Otoktone | Liste des articles</h1>
+                    <p class="mb-0">Tableau de bord</p>
+                </div>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-info float-left m-4"><a class="" href="{{ path('user_new') }}">Nouveau</a></button>
+                <button type="button" class="btn btn-info float-right m-4"><a class="" href="{{ path('admin') }}">Retour</a></button>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Pseudo</th>
+                        <th>Email</th>
+                        <th>Roles</th>
+                        <th>actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                        <tr>
+                            <td>{{ user.pseudo }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+                            <td>
+                                <a href="{{ path('user_show', {'id': user.id}) }}">show</a>
+                                <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="7">Aucuns utilisateurs</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('back') }}
+{% endblock %}
+

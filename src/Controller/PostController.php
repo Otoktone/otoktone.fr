@@ -150,7 +150,7 @@ class PostController extends AbstractController
 
             $imageFileName = $post->getImage();
             $pathToFile = $this->getParameter('images_directory').'/'.$imageFileName;
-            if (file_exists($pathToFile)) {
+            if (is_file($pathToFile)) {
                 $logger->error("Le fichier $pathToFile existe.");
                 unlink($pathToFile);
             } else {

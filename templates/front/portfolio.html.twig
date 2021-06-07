@@ -27,7 +27,9 @@
             <div id="skew">
                 <div id="post-tableau" class="w-85 m-5 text-white">
                     <div class="portfolio-otoktone">
-                        <img class="img-portfolio img-fluid" src="{{ asset('uploads/images/' ~ post.image) }}" alt="">
+                    {% if post.image %}
+                        <img class="img-portfolio img-fluid" src="{{ asset('uploads/images/' ~ post.image) }}" alt="{{ post.title }}">
+                    {% endif %}
                         <h2 class="text-uppercase">{{ post.title }}</h2>
                         <hr>
                         <p class="text-justify">{{ post.content }}</p>
@@ -44,7 +46,9 @@
             <h4 class="text-uppercase">-Réalisations-</h4>
             <div id="portfolio" class="col-lg-12">
             {% for post in posts %}
-                    <img class="img-fluid" src="{{ asset('uploads/images/' ~ post.image) }}" alt="">
+            {% if post.image %}
+                <img class="img-fluid" src="{{ asset('uploads/images/' ~ post.image) }}" alt="{{ post.title }}">
+            {% endif %}
             {% endfor %}
             </div>
             
