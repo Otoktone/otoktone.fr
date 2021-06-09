@@ -6,6 +6,7 @@ use App\Repository\PostRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\HttpFoundation\File\File;
+use Gedmo\Mapping\Annotation as Gedmo;
 use DateTime;
 
 
@@ -28,6 +29,7 @@ class Post
     private $title;
 
     /**
+     * @Gedmo\Slug(fields={"title", "slug"})
      * @ORM\Column(type="string", length=255)
      */
     private $slug;
