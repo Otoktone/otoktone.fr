@@ -17,6 +17,11 @@ Encore
         to: 'images/[path][name].[ext]',
     })
 
+    .copyFiles({
+        from: './assets/tarteaucitronjs',
+        to: 'tarteaucitronjs/[path][name].[ext]',
+    })
+
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
 
@@ -34,6 +39,7 @@ Encore
     .addEntry('weather', './assets/weather.js')
     .addEntry('contact', './assets/contact.js')
     .addEntry('scroll-top', './assets/scroll-top.js')
+    .addEntry('cookies', './assets/cookies.js')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
