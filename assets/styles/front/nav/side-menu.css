@@ -6,7 +6,7 @@
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 98;
   top: 0;
   left: 0;
   /*background: linear-gradient(135deg, rgba(29,96,164,1) 0%, rgba(34,100,99,1) 35%, rgba(84,133,111,1) 82%);*/

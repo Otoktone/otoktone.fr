@@ -3,7 +3,7 @@
 -------------------------------- */
 
 .menu[aria-expanded="true"] + .sidenav {
-  width: 100%;
+    width: 100%;
 }
 
 .menu {
@@ -13,7 +13,7 @@
     padding: 0;
     margin-top: 35px;
     margin-right: 50px;
-    z-index: 2;
+    z-index: 99;
 }
 
 .line {
@@ -55,4 +55,13 @@
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
     stroke-width: 6;
+}
+
+@media (max-width: 480px) {
+
+    .menu {
+        background-color: black;
+        margin-top: 30px;
+        margin-right: 45px;
+    }
 }

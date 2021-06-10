@@ -1,6 +1,14 @@
 /** --------------------------------
  -- OTOKTONE PAGE
 -------------------------------- */
+ #otoktone {
+    padding-bottom: 100px;
+ }
+
+.logo-otoktone {
+    margin-top: 27px;
+    margin-left: 45px;
+}
 
 div#container {
     text-align: center;
@@ -11,7 +19,7 @@ div#container {
     transform: skewY(-5deg);
     border-bottom: 4px solid #1d60a4;
     border-top: 4px solid #226463;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 }
 
 div.frame {
@@ -94,5 +102,25 @@ div.text p.infos {
         #226463, 
         rgba(0, 0, 0, 0)
         ) 1 100%;
+}
+
+@media (max-width: 480px) {
+
+    .logo-otoktone {
+        margin-top: 20px;
+        margin-left: 25px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    div#container {
+        margin-top: 25px;
+    }
+
+    div.text p.infos {
+        width: 95%;
+    }
 }
 

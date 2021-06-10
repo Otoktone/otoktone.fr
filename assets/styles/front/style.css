@@ -22,10 +22,11 @@ body {
 
 header {
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     background: transparent;
+    z-index: 98;
 }
 
 a, a:hover, a:visited, a:active
@@ -45,4 +46,40 @@ h1, h2, h3, h4 {
 .logo-otoktone {
     width: 80px;
     height: 80px;
+}
+
+.scroll-top {
+    background: #226463;
+    border: 0;
+    border-radius: 50%;
+    bottom: 0;
+    cursor: pointer;
+    height: 50px;
+    margin: 15px;
+    opacity: 0.75;
+    position: fixed;
+    right: -70px;
+    transition: right 0.2s ease-in-out;
+    width: 50px;
+    z-index: 97;
+}
+
+.scroll-top.visible {
+    right: 0;
+}
+  
+.arrow {
+    border: solid #000000;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    margin-top: 5px;
+    padding: 4px;
+}
+
+.arrow.up {  
+    transform: rotate(-135deg);
+}
+
+@media (max-width: 480px) {
+    
 }

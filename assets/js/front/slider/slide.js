@@ -7,23 +7,24 @@ $(function () {
             left: '-100%',
         }, 1000 );
         $('#presentation2').animate({
-            left: '0',
+            right: '0',
         }, 1000 );
-        $('#arrow-right').css('visibility', 'hidden');
-        $('#arrow-left').css('visibility', 'visible');
+        $('#arrow-right').css('visibility', 'hidden').animate({opacity: '0'}, "slow");
+        $('#arrow-left').css('visibility', 'visible').animate({opacity: '1'}, "slow");
     });
 
     $('#arrow-left').on('click', function () {
         $('canvas').animate({
-            left: '0%',
+            right: '0%',
         }, 1000 );
         $('.main-title').animate({
             left: '5%',
         }, 1000 );
         $('#presentation2').animate({
-            left: '-100%',
+            right: '-100%',
         }, 1000 );
-        $('#arrow-right').css('visibility', 'visible');
-        $('#arrow-left').css('visibility', 'hidden');
+        $('#arrow-right').css('visibility', 'visible').animate({opacity: '1'}, "slow");
+        $('#arrow-left').css('visibility', 'hidden').animate({opacity: '0'}, "slow");
     });
+
 });

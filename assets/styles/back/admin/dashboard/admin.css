@@ -295,6 +295,8 @@ html body {
 	padding-top: 50px;
 	margin-top: 2rem;
 	padding-bottom: 50px;
+	border: solid white 1px;
+    border-radius: 3px;
 }
 
 .clear {

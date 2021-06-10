@@ -20,8 +20,9 @@
 
 .contact-container {
   display: flex;
-  height: 100vh;
+  height: 80vh;
   background: var(--bg-color);
+  overflow: hidden;
 }
 
 .left-col {
@@ -90,9 +91,7 @@ form {
 }
 
 #contact_nom:focus, #contact_mail:focus, #contact_message:focus {
-  color: black;
   font-weight: 500;
-  background: white;
 }
 
 .form-control {
@@ -144,11 +143,17 @@ form {
   .left-col {
     display: none;
   }
+  .right-col {
+    width: 100%;
+  }
   h2 {
     font-size: 1.75rem;
   }
   p {
     font-size: 0.7rem;
+  }
+  #contact p {
+    width: 100%;
   }
   #contact_nom, #contact_mail, #contact_message, #submit-button {
     font-size: 0.65rem;

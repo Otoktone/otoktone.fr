@@ -33,6 +33,7 @@ Encore
     .addEntry('home', './assets/home.js')
     .addEntry('weather', './assets/weather.js')
     .addEntry('contact', './assets/contact.js')
+    .addEntry('scroll-top', './assets/scroll-top.js')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
