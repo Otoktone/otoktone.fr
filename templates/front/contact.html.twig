@@ -35,6 +35,7 @@
 
             {{ form_start(contact_form) }}
             {{ form_widget(contact_form) }}
+            {{ form_row(contact_form.captchaCode) }}
             <input id="submit-button" type="submit" value="Envoyer" />
             {{ form_end(contact_form) }}
             

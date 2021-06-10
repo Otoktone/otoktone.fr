@@ -7,6 +7,7 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Captcha\Bundle\CaptchaBundle\Form\Type\CaptchaType;
 
 class ContactType extends AbstractType
 {
@@ -16,6 +17,9 @@ class ContactType extends AbstractType
             ->add("nom")
             ->add('mail', EmailType::class)
             ->add('message', TextareaType::class)
+            ->add('captchaCode', CaptchaType::class, array(
+                'captchaConfig' => 'ExampleCaptcha'
+            ));
         ;
     }
 

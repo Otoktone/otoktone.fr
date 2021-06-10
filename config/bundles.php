@@ -14,4 +14,5 @@ return [
     Symfony\Bundle\MonologBundle\MonologBundle::class => ['all' => true],
     Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle::class => ['all' => true],
     Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle::class => ['all' => true],
+    Captcha\Bundle\CaptchaBundle\CaptchaBundle::class => ['all' => true],
 ];
