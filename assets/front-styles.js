@@ -26,6 +26,7 @@ import './styles/front/nav/side-menu.css';
 import './styles/front/presentation/presentation.css';
 import './styles/front/pages/otoktone.css';
 import './styles/front/pages/portfolio.css';
+import './styles/front/pages/mentions.css';
 
 /*
 * FRONT JS

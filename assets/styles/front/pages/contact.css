@@ -140,6 +140,10 @@ form {
   #contact {
     overflow: hidden;
   }
+  #contact form {
+    margin-top: 10px;
+    width: 100%;
+  }
   .left-col {
     display: none;
   }
@@ -157,7 +161,7 @@ form {
   }
   #contact_nom, #contact_mail, #contact_message, #submit-button {
     font-size: 0.65rem;
-    width: 250px;
+    width: 100%;
   }
   #submit-button {
     width: 7rem;

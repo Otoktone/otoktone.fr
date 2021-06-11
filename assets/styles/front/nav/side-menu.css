@@ -57,6 +57,20 @@
   padding-top: 50px;
 }
 
+#copyright a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818386;
+  display: unset;
+  transition: 0.3s;
+  text-transform: capitalize;
+  line-height: auto;
+  letter-spacing: unset;
+  border: none;
+}
+
 .footer-social {
   display: flex;
   margin: auto;
@@ -98,6 +112,10 @@
 
   #copyright {
     padding-top: 25px;
+  }
+
+  #copyright a {
+    font-size: 11px;
   }
 }
 
