@@ -113,10 +113,6 @@
   #copyright {
     padding-top: 25px;
   }
-
-  #copyright a {
-    font-size: 11px;
-  }
 }
 
 @media screen and (max-height: 450px) {
