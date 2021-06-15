@@ -370,3 +370,8 @@ html body {
 ::-webkit-scrollbar-thumb:hover {
 	background-color: rgba(0, 0, 0, 0.3);
 }
+
+
+@media (max-width: 480px) {
+    
+}

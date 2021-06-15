@@ -102,6 +102,10 @@
     padding-top: 30px;
   }
 
+  .sidenav img {
+    height: 20%;
+  }
+
   #legal-mentions {
     display: none;
   }
@@ -112,6 +116,15 @@
 
   #copyright {
     padding-top: 25px;
+    width: 80%;
+  }
+
+  #copyright a {
+    font-size: 0.7rem;
+  }
+
+  #copyright p {
+    font-size: 0.7rem;
   }
 }
 

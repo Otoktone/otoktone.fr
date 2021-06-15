@@ -1,5 +1,5 @@
 
-
+/*
 function $(selector) {
 	return document.querySelector(selector)
 }
@@ -33,7 +33,7 @@ $('.sidebar .close-aside').addEventListener('click', function () {
 // Global defaults
 
 Chart.defaults.global.animation.duration = 2000; // Animation duration
-
+*/
 
 
 
