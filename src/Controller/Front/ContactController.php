@@ -24,11 +24,16 @@ class ContactController extends AbstractController
             $contactFormData = $form->getData();
 
             $message = (new \Swift_Message('Nouveau message de Otoktone.fr'))
+                // On attribue l'expéditeur
                 ->setFrom($contactFormData['mail'])
+                // On attribue le destinataire
                 ->setTo('alexandre.desmot@gmail.com')
+                // On crée le texte avec la vue
                 ->setBody(
-                    $contactFormData['message'],
-                    'text/plain'
+                    $this->renderView(
+                        'emails/email.html.twig', compact('contactFormData')
+                    ),
+                    'text/html'
                 )
             ;
 

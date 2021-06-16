@@ -4,8 +4,28 @@
 
     <head>
 
+        <meta charset="utf-8">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154431744-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-154431744-3');
+        </script>
+
+
         <!-- TARTE AU CITRON / COOKIES -->
         <script type="text/javascript" src="{{ asset('build/tarteaucitronjs/tarteaucitron.js') }}"></script>
+
+        <script type="text/javascript">
+            tarteaucitron.user.gtagUa = 'UA-154431744-3';
+            // tarteaucitron.user.gtagCrossdomain = ['example.com', 'example2.com'];
+            tarteaucitron.user.gtagMore = function () { /* add here your optionnal gtag() */ };
+            (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+        </script>
 
         <script type="text/javascript">
         tarteaucitron.init({
@@ -50,7 +70,6 @@
         </script>
 
         <!-- HTML Meta Tags -->
-        <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- Compatibilité IE -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="description" content="Alexandre Desmot| Conception Web | Developpeur Web | Integration | Design | Otoktone">
@@ -89,11 +108,12 @@
     <body>
 
         {% block body %}{% endblock %}
-
-    </body>
-
         {% block javascripts %}
             {{ encore_entry_script_tags('front') }}
         {% endblock %}
+
+    </body>
+
+        
 
 </html>

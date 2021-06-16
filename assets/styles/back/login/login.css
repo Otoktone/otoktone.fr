@@ -22,3 +22,10 @@ form input {
     width: 350px;
     color: white;
 }
+
+@media (max-width: 480px) {
+    #login_form {
+        padding: 20px;
+        width: 95% !important;
+    }
+}
