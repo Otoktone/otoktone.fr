@@ -80,6 +80,7 @@ div.text h2.title  {
 
 div.text h3.desc  {
     margin-top: 25px;
+    margin-bottom: 25px;
     font-size: 20px;
     color: white;
     text-transform: uppercase;
@@ -89,7 +90,7 @@ div.text h3.desc  {
 div.text p.infos {
     margin: auto;
     padding: 25px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     color: white;
     width: 85%;
     padding: 1rem;
@@ -102,6 +103,23 @@ div.text p.infos {
         #226463, 
         rgba(0, 0, 0, 0)
         ) 1 100%;
+}
+
+#concept hr {
+    margin: auto;
+    width: 50%;
+}
+
+#concept svg {
+    font-size: 3em;
+}
+
+#concept h4 {
+    margin-top: 25px;
+}
+
+#techno {
+    text-align: center;
 }
 
 @media (max-width: 480px) {

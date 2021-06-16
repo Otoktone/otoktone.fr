@@ -66,7 +66,6 @@
   display: unset;
   transition: 0.3s;
   text-transform: capitalize;
-  line-height: auto;
   letter-spacing: unset;
   border: none;
 }
@@ -96,6 +95,19 @@
 #github {
   color: #4078c0;
 }
+
+
+@media only screen and (max-width: 800px) and (min-width: 500px) {
+  .side-menu a {
+    width: 165px;
+  }
+  #legal-mentions, #copyright {
+    width: 85%;
+  }
+}
+
+
+
 
 @media (max-width: 480px) {
   .sidenav {
