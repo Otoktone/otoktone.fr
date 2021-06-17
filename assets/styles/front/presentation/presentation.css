@@ -118,7 +118,7 @@
     top: 45%;
     font-size: 3em;
     cursor: pointer;
-    z-index: 99;
+    z-index: 97;
     visibility: hidden;
 }
 
@@ -129,7 +129,7 @@
     font-size: 3em;
     cursor: pointer;
     visibility: hidden;
-    z-index: 99;
+    z-index: 97;
     opacity: 0;
 }
 

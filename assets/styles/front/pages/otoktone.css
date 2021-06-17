@@ -111,7 +111,7 @@ div.text p.infos {
 }
 
 #concept svg {
-    font-size: 3em;
+    font-size: 3em !important;
 }
 
 #concept h4 {
