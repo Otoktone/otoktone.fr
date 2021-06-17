@@ -1,12 +1,10 @@
 {% extends "front/layout/layout.html.twig" %}
 
+{% block title %}Alexandre Desmot | Otoktone | Web Developpeur | Contact{% endblock %}
+
 {% block stylesheets %}
     {{ encore_entry_link_tags('front') }}
     {{ encore_entry_link_tags('contact') }}
-    {#<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
-        crossorigin="anonymous"/>#}
 {% endblock %}
 
 {% block body %}
@@ -32,6 +30,7 @@
 
             <h2>Me contacter</h2>
             <p>Laisser vos coordonnées et je vous recontacte dès que possible !</p>
+            <p>Tél : 06.35.44.33.47</p>
 
             {% include 'flash_message.html.twig' %}
 
