@@ -46,7 +46,7 @@ Spech Tech
   * Un terminal pour executer des `commandes`
   * `symfony` == `php bin`
 
-#### 2.2 Verification
+#### Verification
 * Choisir [la bonne version de PHP]
   * `symfony local:php:list` (local web server)
   * `php -v` (composer version)
@@ -54,12 +54,12 @@ Spech Tech
 * Vérifer les prérequis Symfony
   * `symfony check:requirements`
 
-#### 2.3 Paramétrage
+#### Paramétrage
 * Mettre à jour le fichier de config
   * Dupliquer le fichier .env -> .env.local
   * Mettre à jour les valeurs de variable (si besoin)
 
-#### 2.4 "Build front" du projet
+#### "Build front" du projet
 * Récupérer les dépendances via Composer 
     * `composer install`
 
@@ -72,7 +72,7 @@ Spech Tech
 
 -----------------------------------------------------------
 
-#### 3.2 Installation BDD
+#### Installation BDD
 * Créer la base de données
   * `symfony console doctrine:database:create`
   * `php bin/console doctrine:database:create`
@@ -85,7 +85,7 @@ Spech Tech
   * `symfony console make:migration`
   * `symfony console doctrine:migrations:migrate`
 
-#### 3.3 Commandes d'aide
+#### Commandes d'aide
 
 * Recompile Front auto (en écoute)
   * `yarn encore dev --watch`
