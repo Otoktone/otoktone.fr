@@ -54,7 +54,7 @@ h2 {
   font-weight: 300;
 }
 
-#contact p {
+#contact-form p {
   color: var(--secondary-color);
   font-size: 0.9rem;
   letter-spacing: 0.01rem;
@@ -132,15 +132,15 @@ form {
     width: 7rem;
   }
   .theme-switch-wrapper {
-    width: 120px;
+    width: 250px;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  #contact {
+  #contact-form {
     overflow: hidden;
   }
-  #contact form {
+  #contact-form form {
     margin-top: 10px;
     width: 100%;
   }
@@ -157,7 +157,7 @@ form {
   p {
     font-size: 0.7rem;
   }
-  #contact p {
+  #contact-form p {
     width: 100%;
   }
   #contact_nom, #contact_mail, #contact_message, #submit-button {
@@ -168,6 +168,6 @@ form {
     width: 7rem;
   }
   .theme-switch-wrapper {
-    width: 120px;
+    width: 250px;
   }
 }
