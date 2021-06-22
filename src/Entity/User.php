@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -35,6 +36,7 @@ class User implements UserInterface
 
     /**
      * @var string The hashed password
+     * @Assert\Regex(pattern="/^(?=.*[a-z])(?=.*\d).{6,}$/i", message="Le mot de passe doit contenir au minimum 6 caractères, avec  au moins une lettre et un chiffre.")
      * @ORM\Column(type="string")
      */
     private $password;
