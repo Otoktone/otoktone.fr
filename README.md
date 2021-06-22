@@ -70,3 +70,22 @@ Spech Tech
 * Compile assets once
   * `yarn encore dev`
 
+-----------------------------------------------------------
+
+#### 3.2 Installation BDD
+* Créer la base de données
+  * `symfony console doctrine:database:create`
+  * `php bin/console doctrine:database:create`
+* Créer le schéma des tables
+  * `symfony console doctrine:schema:create`
+* Lancer les fixtures pour peupler la base
+  * `symfony console doctrine:fixtures:load`
+
+* Migration base de données (en cours de dev)
+  * `symfony console make:migration`
+  * `symfony console doctrine:migrations:migrate`
+
+#### 3.3 Commandes d'aide
+
+* Recompile Front auto (en écoute)
+  * `yarn encore dev --watch`
