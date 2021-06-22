@@ -16,7 +16,7 @@
     <!-- OTOKTONE
     ==============================-->
 
-    <div id="contact" class="w-100">
+    <div id="contact-form" class="w-100">
         <div class="header-logo">
             <a href="{{ path('home') }}"><img class="logo-otoktone" src="{{ asset('build/images/logo-otoktone.png') }}" alt="logo otoktone.fr alexandre desmot developpeur conception web contact vannes"></a>
             <h1 class="mt-5 mb-5 ml-2 text-uppercase text-white">Otoktone | Contact</h1>
@@ -24,23 +24,22 @@
         
         <div class="contact-container">
             <div class="left-col"></div>
-            <div class="right-col">
-                <div class="theme-switch-wrapper">
-            </div>
+                <div class="right-col">
+                    <div class="theme-switch-wrapper">
+                        <h2>Me contacter</h2>
+                        <p>Laisser vos coordonnées et je vous recontacte dès que possible !</p>
+                        <p>Tél : 06.35.44.33.47</p>
 
-            <h2>Me contacter</h2>
-            <p>Laisser vos coordonnées et je vous recontacte dès que possible !</p>
-            <p>Tél : 06.35.44.33.47</p>
+                        {% include 'flash_message.html.twig' %}
 
-            {% include 'flash_message.html.twig' %}
-
-            {{ form_start(contact_form) }}
-            {{ form_widget(contact_form) }}
-            {{ form_row(contact_form.captchaCode) }}
-            <input id="submit-button" type="submit" value="Envoyer" />
-            {{ form_end(contact_form) }}
+                        {{ form_start(contact_form) }}
+                        {{ form_widget(contact_form) }}
+                        {{ form_row(contact_form.captchaCode) }}
+                        <input id="submit-button" type="submit" value="Envoyer" />
+                        {{ form_end(contact_form) }}
+                    </div>
+                </div>  
         </div>
-
     </div>
 
 {% endblock %}
