@@ -41,6 +41,10 @@ html body {
 	color: white;
 }
 
+.pagination span {
+	margin-right: 10px;
+}
+
 
 /** --------------------------------
  -- SIDEBAR

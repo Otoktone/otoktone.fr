@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Psr\Log\LoggerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 
 /**
  * @Route("/post")
@@ -22,11 +23,22 @@ class PostController extends AbstractController
     /**
      * @Route("/", name="post_index", methods={"GET"})
      */
-    public function index(PostRepository $postRepository): Response
+    public function index(PostRepository $postRepository, Request $request, PaginatorInterface $paginator): Response
     {
+        $donnees = $this->getDoctrine()->getRepository(Post::class)->findBy([],['created_at' => 'desc']);
+
+        $posts = $paginator->paginate(
+            $donnees,
+            $request->query->getInt('page', 1), 5 
+        );
+        
         return $this->render('post/index.html.twig', [
-            'posts' => $postRepository->findAll(),
+            'posts' => $posts,
         ]);
+
+        /*return $this->render('post/index.html.twig', [
+            'posts' => $postRepository->findAll(),
+        ]);*/
     }
 
     /**

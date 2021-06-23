@@ -54,6 +54,7 @@
                             <th>Actions</th>
                         </tr>
                     </thead>
+                    {{ knp_pagination_render(posts) }}
                     <tbody>
                         {% for post in posts %}
                             <tr>
@@ -84,7 +85,6 @@
                 </table>
             </div>
         </div>
-
     </section>
 
 {% endblock %}
